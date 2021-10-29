@@ -1,3 +1,3 @@
-# Rock Paper Scissors game
+# Library
 
-[Live Preview](https://milosmicevic.github.io/rock-paper-scissors/)
+[Live Preview](https://milosmicevic.github.io/library/)
