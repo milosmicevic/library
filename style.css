@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #e0e0e0;
+  color: #4c5c68;
+  font-family: sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  user-select: none;
+}
+
+#container header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+}
+
+#container main {
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh;
+  width: 100%;
+  gap: 2rem;
+}
+
+.add-books-container {
+  display: flex;
+  width: 100%;
+  gap: 2%;
+  margin-top: 1rem;
+}
+
+.add-books-container input[type="text"] {
+  width: 40%;
+  height: 3rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1.1rem;
+  padding-left: 1rem;
+  color: #4c5c68;
+}
+
+.add-books-container input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #fad155;
+}
+
+.add-books-container button,
+.add-dialog-box button,
+.instructions-dialog-box button {
+  width: 7%;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #fad155;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.add-books-container button:hover {
+  transform: scale(1.05);
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.books-container .fa-question-circle {
+  cursor: pointer;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 3.5rem 4.4%;
+  margin-bottom: 1rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 13%;
+  height: 16rem;
+  background-color: #1abc9c;
+  border-radius: 1rem;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  box-shadow: inset 1.3rem 0 0.1rem 0 #16a085;
+  padding: 1%;
+  word-break: break-all;
+  border: 2px solid #16a085;
+}
+
+.book:hover {
+  transform: rotate(3deg);
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+}
+
+.book .book-title,
+.book .book-author,
+.book .book-pages {
+  pointer-events: none;
+}
+
+.book .book-author {
+  font-style: italic;
+}
+
+.book .fa-times {
+  display: none;
+  position: absolute;
+  top: 3%;
+  left: 7%;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.book .fa-bookmark {
+  position: absolute;
+  top: -2%;
+  right: 10%;
+  color: #d7263d;
+  font-size: 1.7rem;
+  pointer-events: none;
+}
+
+.add-dialog-box,
+.instructions-dialog-box {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  left: 37.5%;
+  top: 15%;
+  background-color: #e0e0e0;
+  border-radius: 2rem;
+  z-index: 10;
+  text-align: center;
+}
+
+.add-dialog-box .add-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.8rem;
+}
+
+.add-dialog-box .add-input-container label {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2%;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.add-input-container input {
+  width: 60%;
+  height: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding-left: 0.5rem;
+}
+
+.add-input-container input:focus {
+  border: 2px solid #fad155;
+}
+
+.add-dialog-box button {
+  width: 30%;
+}
+
+.instructions-dialog-box i {
+  font-size: 4rem;
+}
+
+.instructions-dialog-box button {
+  width: 30%;
+  font-weight: bold;
+  background-color: #d7263d;
+}
+
+.dark-background {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+#container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
+
+#container footer a {
+  text-decoration: none;
+  color: #4c5c68;
+  margin-left: 0.3rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .add-books-container button {
+    width: 12%;
+  }
+  .books {
+    gap: 2rem 4%;
+  }
+  .book {
+    width: 22%;
+  }
+
+  .add-dialog-box,
+  .instructions-dialog-box {
+    width: 38%;
+    left: 31%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #container {
+    width: 90%;
+  }
+  .add-books-container input[type="text"] {
+    width: 60%;
+  }
+  .add-books-container button {
+    width: 18%;
+  }
+  .books {
+    gap: 2rem 4%;
+  }
+  .book {
+    width: 30.66%;
+  }
+  .add-dialog-box,
+  .instructions-dialog-box {
+    width: 56%;
+    left: 22%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .add-books-container input[type="text"] {
+    width: 70%;
+  }
+  .add-books-container button {
+    width: 22%;
+  }
+  .books {
+    gap: 2rem 6%;
+  }
+  .book {
+    width: 44%;
+  }
+  .add-dialog-box,
+  .instructions-dialog-box {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .books {
+    justify-content: center;
+    gap: 2rem 0;
+  }
+  .book {
+    width: 80%;
+  }
+  .add-dialog-box,
+  .instructions-dialog-box {
+    width: 94%;
+    left: 3%;
+  }
+}

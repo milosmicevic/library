@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <script defer src="script.js"></script>
+    <title>Library</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1><i class="fas fa-book-open"></i> Library</h1>
+      </header>
+      <main>
+        <div class="add-books-container">
+          <input
+            class="input-title"
+            type="text"
+            maxlength="35"
+            placeholder="Enter a Book Name"
+          />
+          <button class="add-form-button"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="books-container">
+          <h2><i class="far fa-question-circle"></i> Your Books Collection:</h2>
+          <div class="books"></div>
+        </div>
+
+        <div class="add-dialog-box">
+          <h2 class="book-title"></h2>
+          <div class="add-input-container">
+            <label for="author-name">
+              <i class="fas fa-pen-fancy"></i> Author Name</label
+            >
+            <input type="text" class="author-name" maxlength="25" />
+          </div>
+          <div class="add-input-container">
+            <label for="pages-number">
+              <i class="fas fa-file-alt"></i> Pages</label
+            >
+            <input type="number" class="pages-number" max="10000" />
+          </div>
+          <div class="add-input-container">
+            <label for="read"><i class="fas fa-eye"></i> Read</label>
+            <input type="checkbox" class="read" />
+          </div>
+          <button class="add-button"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="instructions-dialog-box">
+          <h2>Instructions</h2>
+          <i class="fas fa-times"></i>
+          <span
+            >- Click to remove book from Collection <br />
+            (Visible on hover)</span
+          >
+          <i class="fas fa-bookmark"></i>
+          <span
+            >- Mark book as Read <br />
+            (Click on book to toggle it)</span
+          >
+          <button class="close-button">Close</button>
+        </div>
+        <div class="dark-background"></div>
+      </main>
+      <footer>
+        <p>Copyright © 2021</p>
+        <a href="https://github.com/milosmicevic" target="_blank">
+          milosmicevic <i class="fab fa-github"></i
+        ></a>
+      </footer>
+    </div>
+  </body>
+</html>
