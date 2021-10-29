@@ -101,8 +101,13 @@ function populateStorage() {
 
 function loadFromStorage() {
   const library = localStorage.getItem("library");
-
-  myLibrary = library === null ? [] : JSON.parse(library);
+  const sampleLibrary = [
+    { title: "Book 1", author: "Writer", pages: "74", read: true },
+    { title: "Book 2", author: "Writer", pages: "298", read: false },
+    { title: "Book 3", author: "Writer", pages: "129", read: true },
+  ];
+  
+  myLibrary = library === null ? sampleLibrary : JSON.parse(library);
 }
 
 function renderBooks() {
